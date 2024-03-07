@@ -1,0 +1,97 @@
+@import './../global/variables.scss';
+
+.filter {
+    &__wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: min-content 1fr min-content;
+      grid-template-areas: 
+      'form sort sort'
+      'form card card'
+      'form pagin pagin';
+    }
+}
+
+.filter-header{
+  background-color: $base-color-background;
+    margin-bottom: 55px;
+
+  &__title {
+    margin: 0;
+    font-size: 55px;
+    font-weight: 500;
+    line-height: 55px;
+    text-align: center;
+    padding: 87px 0 108px;
+  }
+}
+
+.filter-form {
+  grid-area: form;
+  margin-right: 124px;
+  width: 260px;
+  background-color: #faf4b6;
+}
+
+.filter-sort {
+  grid-area: sort;
+  display: flex;
+  background-color: #c2f4be;
+
+  &__title {
+    margin: 0;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    margin-left: auto;
+    border: 2px solid rgb(99, 47, 230);
+  }
+}
+
+.filter-cards{
+  grid-area: card;
+  background-color: #d0eff4;
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -32px;
+  }
+
+  &__item {
+    width: 358px;
+    height: 618px;
+    margin-right: 40px;
+    margin-bottom: 32px;
+    padding-top: 40px;
+    border: 2px solid red;
+  }
+
+  &__item:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  &__item img {
+    
+    
+  }
+}
+
+.filter-pagination{
+  grid-area: pagin;
+  background-color: #f6eeee;
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+}

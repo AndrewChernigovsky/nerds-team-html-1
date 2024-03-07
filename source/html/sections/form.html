@@ -1,83 +1,128 @@
 <section class="filter">
-	<h2 class="visually-hidden">Выбор макета</h2>
-	<div class="filter__wrapper">
-		<form action="#" method="post">
+	<header class="filter filter-header">
+		<h1 class="filter-header__title">Магазин готовых шаблонов</h1>
+	</header>
+	<div class="container">
+		<div class="filter__wrapper">
+			<form class="filter filter-form" action="#" method="post">
 
-            <!-- слайдер стоимости -->
-			<fieldset class="filter__price-ranger">
-				<legend class="filter__title">Стоимость:</legend>
-				<div class="price__ranger">
-					<button type="button" class="price__ranger-button" id="price-min-button">
-						<span class="visually-hidden">от</span></button>
-					<button type="button" class="price__ranger-button" id="price-max-button">
-						<span class="visually-hidden">до</span></button>
-					<span class="line__active"></span>
-					<span class="line__noactive"></span>
+							<!-- слайдер стоимости -->
+				<fieldset class="filter__price-ranger">
+					<legend class="filter__title">Стоимость:</legend>
+					<div class="price__ranger">
+						<button type="button" class="price__ranger-button" id="price-min-button">
+							<span class="visually-hidden">от</span></button>
+						<button type="button" class="price__ranger-button" id="price-max-button">
+							<span class="visually-hidden">до</span></button>
+						<span class="line__active"></span>
+						<span class="line__noactive"></span>
+					</div>
+					<div class="price__ranger">
+						<label for="price__field-min"><span class="price_from">от</span></label>
+						<input type="number" name="price_min" id="price__field-min" placeholder="от" value="0">
+						<label for="price__field-max"><span class="price_to">до</span></label>
+						<input type="number" name="price_max" id="price__field-max" placeholder="до" value="15000">
+					</div>
+				</fieldset>
+
+				<!-- вариант сетки -->
+				<fieldset class="filter__template-type">
+					<legend class="filter__title">Сетка:</legend>
+					<ul class="teplate__list">
+						<li class="template__item">
+							<label><input type="radio" name="template-type" value="adapt" checked>Адаптивная</label>
+						</li>
+						<li class="template__item">
+							<label><input type="radio" name="template-type" value="fixed" >Фиксированная</label>
+						</li>
+						<li class="template__item">
+							<label><input type="radio" name="template-type" value="pull" >Резиновая</label>
+						</li>
+					</ul>
+				</fieldset>
+
+				<!-- особенности макета -->
+				<fieldset class="filter__feature">
+					<legend class="filter__title">Особенности:</legend>
+					<ul class="feature__list">
+						<li class="feature__item">
+							<label><input type="checkbox" name="slider" checked>Слайдер</label>
+						</li>
+						<li class="feature__item">
+							<label><input type="checkbox" name="advanteges">Блок преимуществ</label>
+						</li>
+						<li class="feature__item">
+							<label><input type="checkbox" name="news" checked>Новости</label>
+						</li>
+						<li class="feature__item">
+							<label><input type="checkbox" name="gallery">Галерея</label>
+						</li>
+						<li class="feature__item">
+							<label><input type="checkbox" name="trash">Корзина</label>
+						</li>
+					</ul>
+				</fieldset>
+				<div class="button__wrapper" >
+					<button class="button button__accept" type="submit">Показать</button>
 				</div>
-				<div class="price__ranger">
-					<label for="price__field-min"><span class="price_from">от</span></label>
-					<input type="number" name="price_min" id="price__field-min" placeholder="от" value="0">
-					<label for="price__field-max"><span class="price_to">до</span></label>
-					<input type="number" name="price_max" id="price__field-max" placeholder="до" value="15000">
+			</form>
+				<!-- сортировка выбранных макетов-->
+			<div class="filter filter-sort">
+					<h2 class="filter-sort__title">Сoртировать:</h2>
+					<ul class="filter-sort__list">
+						<li class="sort__item">
+							<button class="button button-price" type="button">По цене</button>
+						</li>
+						<li class="sort__item">
+							<button class="button button-type" type="button">По типу</button>
+						</li>
+						<li class="sort__item">
+							<button class="button button-name" type="button">По названию</button>
+						</li>
+					</ul>
+			</div>
+			<div class="filter filter-cards">
+					<ul class="filter-cards__list">
+						<li class="filter-cards__item">
+							<a href="#">
+								<img src="./../../images/content/card1-sedona.jpg" alt="Шаблон магазина Седона" width="358" height="577">
+							</a>
+						</li>
+						<li class="filter-cards__item">
+							<a href="#">
+								<img src="./../../images/content/card2-pink.png" alt="Шаблон магазина Пинк" width="358" height="578">
+							</a>
+						</li>
+						<li class="filter-cards__item">
+							<a href="#">
+								<img src="./../../images/content/card3-barbershop.jpg" alt="Шаблон магазина Барбершоп" width="358" height="578">
+							</a>
+						</li>
+						<li class="filter-cards__item">
+							<a href="#">
+								<img src="./../../images/content/card4-mishka.jpg" alt="Шаблон магазина Мишка" width="358" height="578">
+							</a>
+						</li>
+						<li class="filter-cards__item">
+							<a href="#">
+								<img src="./../../images/content/card5-aplus.jpg" alt="Шаблон магазина Аплюс" width="358" height="578">
+							</a>
+						</li>
+						<li class="filter-cards__item">
+							<a href="#">
+								<img src="./../../images/content/card6-kvas.jpg" alt="Шаблон магазина Квас" width="358" height="578">
+							</a>
+						</li>
+					</ul>
+			</div>
+			<div class="filter filter-pagination">
+					<ul class="filter-pagination__list">
+						<li>1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>Следующая</li>
+					</ul>
 				</div>
-			</fieldset>
-
-			<!-- вариант сетки -->
-			<fieldset class="filter__template-type">
-				<legend class="filter__title">Сетка:</legend>
-				<ul class="teplate__list">
-					<li class="template__item">
-						<label><input type="radio" name="template-type" value="adapt" checked>Адаптивная</label>
-					</li>
-					<li class="template__item">
-						<label><input type="radio" name="template-type" value="fixed" >Фиксированная</label>
-					</li>
-					<li class="template__item">
-						<label><input type="radio" name="template-type" value="pull" >Резиновая</label>
-					</li>
-				</ul>
-			</fieldset>
-
-			<!-- особенности макета -->
-			<fieldset class="filter__feature">
-				<legend class="filter__title">Особенности:</legend>
-				<ul class="feature__list">
-					<li class="feature__item">
-						<label><input type="checkbox" name="slider" checked>Слайдер</label>
-					</li>
-					<li class="feature__item">
-						<label><input type="checkbox" name="advanteges">Блок преимуществ</label>
-					</li>
-					<li class="feature__item">
-						<label><input type="checkbox" name="news" checked>Новости</label>
-					</li>
-					<li class="feature__item">
-						<label><input type="checkbox" name="gallery">Галерея</label>
-					</li>
-					<li class="feature__item">
-						<label><input type="checkbox" name="trash">Корзина</label>
-					</li>
-				</ul>
-			</fieldset>
-			<div class="button__wrapper" >
-				<button class="button button__accept" type="submit">Показать</button>
-			</div>
-		</form>
-
-			<!-- сортировка выбранных макетов-->
-			<div class="filter__sort">
-				<h2 class="filter__title">Сoртировать:</h2>
-				<ul class="sort__list">
-					<li class="sort__item">
-						<button class="button button-price" type="button">По цене</button>
-					</li>
-					<li class="sort__item">
-						<button class="button button-type" type="button">По типу</button>
-					</li>
-					<li class="sort__item">
-						<button class="button button-name" type="button">По названию</button>
-					</li>
-				</ul>
-			</div>
+		</div>
 	</div>
 </section>
