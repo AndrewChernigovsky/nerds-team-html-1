@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .filter__wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -19,6 +20,7 @@
   padding: 87px 0 108px;
 }
 
+/*Фильтры*/
 .filter-form {
   grid-area: form;
   margin-right: 124px;
@@ -26,6 +28,7 @@
   background-color: #faf4b6;
 }
 
+/*сортировка выбранных макетов*/
 .filter-sort {
   grid-area: sort;
   display: -webkit-box;
@@ -47,9 +50,10 @@
   border: 2px solid rgb(99, 47, 230);
 }
 
+/*Карточки товаров*/
 .filter-cards {
   grid-area: card;
-  background-color: #d0eff4;
+  margin-bottom: 55px;
 }
 .filter-cards__list {
   margin: 0;
@@ -73,9 +77,12 @@
 .filter-cards__item:nth-child(2n) {
   margin-right: 0;
 }
+
+/*Пагинация*/
 .filter-pagination {
   grid-area: pagin;
-  background-color: #f6eeee;
+  margin-bottom: 60px;
+  border: 2px solid rgb(7, 108, 39);
 }
 .filter-pagination__list {
   margin: 0;
